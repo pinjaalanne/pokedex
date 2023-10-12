@@ -89,6 +89,7 @@ const pokeCounter = (pokemonData) => {
     geneAmount.innerHTML = `There are ${pokemonData.length} pokemons in ${currentGeneration}`;
 };
 
+// adding a scroll function to get back to top button
 window.onscroll = function () {scrollFunction()};
 
 function scrollFunction() {
@@ -99,6 +100,7 @@ function scrollFunction() {
       }
 }
 
+// function for back to top button
 const getToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
