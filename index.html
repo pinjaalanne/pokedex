@@ -13,7 +13,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="stylesheet" href="style.css" />
     <title>Pokedex</title>
@@ -21,11 +21,26 @@
   <body>
     <div class="allpokes">
       <h1>Pokedex</h1>
+      <div class="genButtons">
+        <button class="generations" id="generation-i">GEN-I</button>
+        <button class="generations" id="generation-ii">GEN-II</button>
+        <button class="generations" id="generation-iii">GEN-III</button>
+        <button class="generations" id="generation-iv">GEN-IV</button>
+        <button class="generations" id="generation-v">GEN-V</button>
+        <button class="generations" id="generation-vi">GEN-VI</button>
+        <button class="generations" id="generation-vii">GEN-VII</button>
+        <button class="generations" id="generation-viii">GEN-VIII</button>
+        <button class="generations" id="generation-ix">GEN-IX</button>
+      </div>
+      <p><span class="genAmount"></span></p>
       <div class="searchbar">
         <input type="text" id="search" placeholder="Search..." />
       </div>
       <div class="pokecontainer"></div>
     </div>
+    <button id="backtop" class="backtotop">
+      <span class="material-symbols-outlined">expand_less</span>
+    </button>
     <script src="main.js"></script>
   </body>
 </html>

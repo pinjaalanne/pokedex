@@ -6,6 +6,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(background.jpg);
     height: 100vh;
@@ -20,7 +24,41 @@ h1 {
     text-shadow: 2px 2px 3px rgb(125, 43, 76);
 }
 
+/* Styling the generation buttons */
+
+.genButtons {
+    margin: 3rem 0 1.5rem;
+}
+
+.generations {
+    font-size: 1rem;
+    margin: 0 0.2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    color: rgb(156, 76, 118);
+    text-shadow: 1px 1px 1px rgb(190, 148, 163);
+    box-shadow: 1px 1px 4px rgba(132, 66, 92, 0.674);
+    cursor: pointer;
+}
+
+.generations:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Styling the generation amount text */
+
+.genAmount {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 3px rgb(125, 43, 76);
+    margin: 1rem 0;
+}
+
+/* Styling the search bar */
+
 input {
+    display: none;
     margin: 1rem 0 2rem;
 }
 
@@ -32,6 +70,11 @@ input {
     font-family: 'Open Sans', sans-serif;
     color: rgb(156, 76, 118);
     padding: 1rem;
+    box-shadow: 1px 1px 4px rgba(132, 66, 92, 0.674);
+}
+
+input.visible {
+    display: flex;
 }
 
 .searchbar {
@@ -42,7 +85,7 @@ input {
 }
 
 input:hover {
-    background: rgb(247, 232, 243);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 ::placeholder {
@@ -50,11 +93,13 @@ input:hover {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Styling the pokemon cards container and the pokemon cards */
+
 .pokecontainer {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-columns: repeat(auto-fill, 300px);
     grid-template-rows: repeat(1, 1fr);
     grid-gap: 0.2rem;
     padding: 0.4rem;
@@ -78,16 +123,16 @@ input:hover {
     filter: none;
 }
 
-.bulba {
-    height: 150px;
+.pokeimg {
+    height: 140px;
     width: auto;
-    margin: 1rem 0 0;
+    margin: 2rem 0 0;
 }
 
 .poketext {
     background: white;
     padding: 0.7rem;
-    margin: auto 1rem;
+    margin: auto 1rem 1rem;
     border-radius: 20px;
     box-shadow: 1px 1px 1px rgba(161, 113, 142, 0.677);
 }
@@ -125,4 +170,25 @@ input:hover {
     padding: 0.5rem;
     border-radius: 20px;
     box-shadow: 1px 1px 1px rgba(161, 113, 142, 0.677);;
+}
+
+.backtotop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+#backtop {
+    border: 1px solid pink;
+    background-color: white;
+    color: rgb(156, 76, 118);
+    box-shadow: 1px 1px 4px rgba(132, 66, 92, 0.674);
+    border-radius: 50%;
+    padding: 0.8rem;
+}
+
+#backtop:hover {
+    background-color: rgba(255, 255, 255, 0.75);
 }
